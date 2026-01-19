@@ -94,16 +94,83 @@ const MapView: React.FC<MapViewProps> = ({ user, onStartChallenge, onSelectWord,
       <main className="flex-1 overflow-hidden bg-[#e0f7fa]">
         <div className="h-full w-full relative" style={{ backgroundImage: "linear-gradient(to bottom, #b3e5fc 0%, #e1f5fe 20%, #f1f8e9 60%, #c8e6c9 100%)" }}>
 
-          {/* Decorative elements - STRICTLY NO POINTER EVENTS */}
-          <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20">
+          {/* Decorative elements - 地图装饰元素 */}
+
+          {/* 连接路径 */}
+          <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-15">
             <svg className="w-full h-full" viewBox="0 0 400 800">
-              <path d="M 200 750 Q 350 680 200 600 T 200 450 T 250 280 T 150 100" fill="none" stroke="white" strokeWidth="16" strokeLinecap="round" strokeDasharray="10 15" />
+              {/* 主路径 - 连接三个入口 */}
+              <path
+                d="M 60 200 Q 100 280 150 350 Q 200 420 200 500"
+                fill="none"
+                stroke="#8B7355"
+                strokeWidth="20"
+                strokeLinecap="round"
+              />
+              {/* 虚线装饰路径 */}
+              <path
+                d="M 60 200 Q 100 280 150 350 Q 200 420 200 500"
+                fill="none"
+                stroke="white"
+                strokeWidth="8"
+                strokeLinecap="round"
+                strokeDasharray="15 20"
+              />
             </svg>
           </div>
 
-          <div className="absolute top-12 left-8 pointer-events-none opacity-50 text-orange-400"><span className="material-symbols-outlined text-3xl">home</span></div>
-          <div className="absolute top-20 right-12 pointer-events-none opacity-50 text-emerald-400 animate-spin-slow"><span className="material-symbols-outlined text-4xl">mode_fan</span></div>
-          <div className="absolute top-[55%] left-10 pointer-events-none opacity-50 text-emerald-300"><span className="material-symbols-outlined text-3xl">potted_plant</span></div>
+          {/* 树木装饰 */}
+          <div className="absolute pointer-events-none" style={{ top: '140px', left: '20px', opacity: 0.6 }}>
+            <span className="material-symbols-outlined text-green-600 text-5xl">park</span>
+          </div>
+          <div className="absolute pointer-events-none" style={{ top: '160px', right: '40px', opacity: 0.5 }}>
+            <span className="material-symbols-outlined text-green-500 text-4xl">nature</span>
+          </div>
+          <div className="absolute pointer-events-none" style={{ top: '280px', left: '30%', opacity: 0.6 }}>
+            <span className="material-symbols-outlined text-emerald-600 text-6xl">forest</span>
+          </div>
+          <div className="absolute pointer-events-none" style={{ top: '420px', right: '50px', opacity: 0.5 }}>
+            <span className="material-symbols-outlined text-green-600 text-5xl">park</span>
+          </div>
+          <div className="absolute pointer-events-none" style={{ top: '560px', left: '70%', opacity: 0.6 }}>
+            <span className="material-symbols-outlined text-emerald-500 text-4xl">nature</span>
+          </div>
+
+          {/* 村庄/房屋 */}
+          <div className="absolute pointer-events-none" style={{ top: '100px', right: '60px', opacity: 0.5 }}>
+            <div className="flex flex-col items-center">
+              <span className="material-symbols-outlined text-orange-400 text-5xl">cottage</span>
+              <div className="w-12 h-1 bg-orange-300/50 rounded-full mt-1"></div>
+            </div>
+          </div>
+          <div className="absolute pointer-events-none" style={{ top: '430px', left: '15%', opacity: 0.4 }}>
+            <span className="material-symbols-outlined text-red-400 text-4xl">home</span>
+          </div>
+
+          {/* 云朵 */}
+          <div className="absolute pointer-events-none animate-float" style={{ top: '50px', left: '30%', opacity: 0.3 }}>
+            <span className="material-symbols-outlined text-white text-6xl">cloud</span>
+          </div>
+          <div className="absolute pointer-events-none animate-float-delayed" style={{ top: '80px', right: '20%', opacity: 0.25 }}>
+            <span className="material-symbols-outlined text-white text-5xl">cloud</span>
+          </div>
+
+          {/* 花朵/草丛 */}
+          <div className="absolute pointer-events-none" style={{ top: '320px', left: '10px', opacity: 0.5 }}>
+            <span className="material-symbols-outlined text-pink-400 text-3xl">local_florist</span>
+          </div>
+          <div className="absolute pointer-events-none" style={{ top: '580px', right: '25%', opacity: 0.5 }}>
+            <span className="material-symbols-outlined text-purple-400 text-3xl">local_florist</span>
+          </div>
+          <div className="absolute pointer-events-none" style={{ top: '240px', right: '15%', opacity: 0.4 }}>
+            <span className="material-symbols-outlined text-yellow-300 text-2xl">stars</span>
+          </div>
+
+          {/* 风车 */}
+          <div className="absolute pointer-events-none" style={{ top: '180px', left: '75%', opacity: 0.4 }}>
+            <span className="material-symbols-outlined text-blue-400 text-5xl animate-spin-slow">mode_fan</span>
+          </div>
+
 
           {/* Entry 1: 记忆大挑战 - 下部左侧 */}
           <div

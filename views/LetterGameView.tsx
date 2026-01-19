@@ -155,8 +155,8 @@ const LetterGameView: React.FC<LetterGameViewProps> = ({ words, onBack }) => {
           {currentWordState.map((letter, idx) => (
             <div key={idx} className="flex flex-col items-center">
               <span className={`text-5xl font-black leading-none min-w-[1em] text-center transition-all ${letter === '' ? 'text-primary/10' :
-                  isCorrect === true ? 'text-green-500' :
-                    isCorrect === false ? 'text-red-500' : 'text-primary'
+                isCorrect === true ? 'text-green-500' :
+                  isCorrect === false ? 'text-red-500' : 'text-primary'
                 }`}>{letter || '_'}</span>
               <div className={`h-1.5 w-full rounded-full mt-2 transition-colors ${letter === '' ? 'bg-slate-200' : isCorrect === true ? 'bg-green-500' : isCorrect === false ? 'bg-red-500' : 'bg-primary'}`} />
             </div>
@@ -196,14 +196,14 @@ const LetterGameView: React.FC<LetterGameViewProps> = ({ words, onBack }) => {
           onClick={handleConfirm}
           disabled={currentWordState.includes('') || isCorrect === true}
           className={`w-full py-5 rounded-[2rem] font-black text-xl shadow-xl transition-all active:scale-95 flex items-center justify-center gap-3 ${isCorrect === true
-              ? 'bg-green-500 text-white shadow-[0_6px_0_0_#15803d]'
-              : currentWordState.includes('')
-                ? 'bg-slate-200 text-slate-400 cursor-not-allowed'
-                : 'bg-primary text-white shadow-[0_6px_0_0_#c2410c]'
+            ? 'bg-green-500 text-white shadow-[0_6px_0_0_#15803d]'
+            : currentWordState.includes('')
+              ? 'bg-slate-200 text-slate-400 cursor-not-allowed'
+              : 'bg-primary text-white shadow-[0_6px_0_0_#c2410c]'
             }`}
         >
           {isCorrect === true ? (
-            <><span className="material-symbols-outlined font-bold success-bounce">celebration</span><span>咒语生效！</span></>
+            <><span className="material-symbols-outlined font-bold success-bounce">celebration</span><span>继续挑战</span></>
           ) : (
             <span>确定</span>
           )}

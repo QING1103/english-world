@@ -105,10 +105,10 @@ const MapView: React.FC<MapViewProps> = ({ user, onStartChallenge, onSelectWord,
           <div className="absolute top-20 right-12 pointer-events-none opacity-50 text-emerald-400 animate-spin-slow"><span className="material-symbols-outlined text-4xl">mode_fan</span></div>
           <div className="absolute top-[55%] left-10 pointer-events-none opacity-50 text-emerald-300"><span className="material-symbols-outlined text-3xl">potted_plant</span></div>
 
-          {/* Entry 1: 记忆大挑战 */}
+          {/* Entry 1: 记忆大挑战 - 左下位置 */}
           <div
             onClick={onStartChallenge}
-            className="absolute top-[48%] left-1/2 -translate-x-1/2 game-hit-area"
+            className="absolute bottom-[15%] left-[10%] game-hit-area"
           >
             <div className="flex flex-col items-center pointer-events-none">
               <div className="relative animate-float">
@@ -125,10 +125,10 @@ const MapView: React.FC<MapViewProps> = ({ user, onStartChallenge, onSelectWord,
             </div>
           </div>
 
-          {/* Entry 2: 字母消消乐 */}
+          {/* Entry 2: 字母消消乐 - 右中位置 */}
           <div
             onClick={onStartLetterGame}
-            className="absolute top-[35%] right-[15px] game-hit-area game-hit-area-side"
+            className="absolute top-[45%] right-[10%] game-hit-area game-hit-area-side"
           >
             <div className="flex flex-col items-center pointer-events-none">
               <div className="relative animate-float-delayed">
@@ -142,10 +142,10 @@ const MapView: React.FC<MapViewProps> = ({ user, onStartChallenge, onSelectWord,
             </div>
           </div>
 
-          {/* Entry 3: 单词魔法卡 */}
+          {/* Entry 3: 单词魔法卡 - 左上位置（主要入口）*/}
           <div
             onClick={onOpenWordBook}
-            className="absolute top-[20%] left-1/2 -translate-x-1/2 game-hit-area"
+            className="absolute top-[18%] left-[15%] game-hit-area"
           >
             <div className="flex flex-col items-center pointer-events-none">
               <div className="relative animate-float">
@@ -172,26 +172,7 @@ const MapView: React.FC<MapViewProps> = ({ user, onStartChallenge, onSelectWord,
         </div>
       </main>
 
-      {/* Task Footer */}
-      <div className="absolute bottom-28 left-4 right-4 z-40 pointer-events-auto">
-        <div
-          onClick={onOpenWordBook}
-          className="bg-white/95 backdrop-blur-xl rounded-[2.5rem] p-4 flex items-center justify-between shadow-2xl border-4 border-sky-200 active:scale-95 transition-transform cursor-pointer"
-        >
-          <div className="flex items-center gap-3">
-            <div className="w-16 h-16 bg-gradient-to-br from-sky-400 to-blue-500 rounded-[1.5rem] flex items-center justify-center text-white shadow-lg border-2 border-white">
-              <span className="material-symbols-outlined text-4xl animate-bounce">rocket_launch</span>
-            </div>
-            <div className="flex flex-col">
-              <p className="text-[9px] font-black text-sky-500 uppercase tracking-widest mb-0.5">NEXT LEVEL</p>
-              <p className="text-xl font-black text-slate-800 leading-tight">第一关 · 魔法学院</p>
-            </div>
-          </div>
-          <div className="w-12 h-12 rounded-full bg-sky-500 text-white flex items-center justify-center border-2 border-white shadow-md">
-            <span className="material-symbols-outlined font-black text-2xl">play_arrow</span>
-          </div>
-        </div>
-      </div>
+      {/* 移除底部任务卡片，给地图更多空间 */}
     </div>
   );
 };

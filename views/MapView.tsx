@@ -108,7 +108,8 @@ const MapView: React.FC<MapViewProps> = ({ user, onStartChallenge, onSelectWord,
           {/* Entry 1: 记忆大挑战 - 下部左侧 */}
           <div
             onClick={onStartChallenge}
-            className="absolute top-[65%] left-[12%] game-hit-area"
+            className="absolute left-[50px] game-hit-area"
+            style={{ top: '500px' }}
           >
             <div className="flex flex-col items-center pointer-events-none">
               <div className="relative animate-float">
@@ -128,7 +129,8 @@ const MapView: React.FC<MapViewProps> = ({ user, onStartChallenge, onSelectWord,
           {/* Entry 2: 字母消消乐 - 中部右侧 */}
           <div
             onClick={onStartLetterGame}
-            className="absolute top-[50%] right-[8%] game-hit-area game-hit-area-side"
+            className="absolute right-[30px] game-hit-area game-hit-area-side"
+            style={{ top: '350px' }}
           >
             <div className="flex flex-col items-center pointer-events-none">
               <div className="relative animate-float-delayed">
@@ -145,7 +147,8 @@ const MapView: React.FC<MapViewProps> = ({ user, onStartChallenge, onSelectWord,
           {/* Entry 3: 单词魔法卡 - 上中部左侧（主要入口）*/}
           <div
             onClick={onOpenWordBook}
-            className="absolute top-[30%] left-[18%] game-hit-area"
+            className="absolute left-[60px] game-hit-area"
+            style={{ top: '200px' }}
           >
             <div className="flex flex-col items-center pointer-events-none">
               <div className="relative animate-float">

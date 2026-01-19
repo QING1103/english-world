@@ -54,10 +54,10 @@ const MapView: React.FC<MapViewProps> = ({ user, onStartChallenge, onSelectWord,
           pointer-events: auto;
         }
         .game-hit-area:active {
-          transform: scale(0.92) translate(-54%, -4%); /* 微调保持相对居中 */
+          transform: scale(0.95);
         }
         .game-hit-area-side:active {
-          transform: scale(0.92);
+          transform: scale(0.95);
         }
         .cartoon-border {
           border-width: 4px;

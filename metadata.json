@@ -1,0 +1,7 @@
+{
+  "name": "单词魔法卡 (Word Magic)",
+  "description": "An interactive AI-powered English learning application with gamified elements, featuring word magic cards, adventure maps, and leaderboards.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

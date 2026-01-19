@@ -1,34 +1,32 @@
 -- =====================================================
--- 单词魔法卡 - 初始数据
+-- 单词魔法卡 - 种子数据
 -- =====================================================
 
 -- =====================================================
--- 插入默认用户
+-- 插入用户数据
 -- =====================================================
-INSERT INTO users (id, name, avatar, level, xp, xp_max, stars, achievements, learned_words)
-VALUES (
+INSERT INTO users (id, name, avatar, level, xp, stars, achievements, learned_words) VALUES
+(
     '00000000-0000-0000-0000-000000000001',
-    '小小英雄 · 飞飞',
-    'https://lh3.googleusercontent.com/aida-public/AB6AXuC7ZfEeUuCgRvq_rkNd1uzIk5XrnnOBGv3p8QAEKHj7aWFuPr2xWfvXvFjGiyOnaTFOdH0EWo-3O-I5iWhr0LF36ZFn8dH6ok9lCXB9oZRkBzuWBf8bCWvpkuKa2F4nj87SYw_rzxHwTslHdAszEI36oXuicAHQgX8ED1O2nLgmCQQNvakfABtwHPx5QUQlojgAjuJnbMUIAjuz-rqCEpF6Lh10zLh-IaWkh0U232u1Do3sP8xKNNji3LzSzTNHPXhminhfXBUfNIA',
-    12,
-    650,
-    1000,
+    '小明',
+    '👦',
+    5,
     1250,
-    3800,
-    1250
+    150,
+    8,
+    25
 );
 
--- 插入排行榜用户
-INSERT INTO users (name, avatar, level, stars, achievements) VALUES
-('冠军玩家', 'https://lh3.googleusercontent.com/aida-public/AB6AXuDpEAiWCS9NCH0UT3ZwaF7Df6jJKcNKltXz_Q_n5kytDfe3bqPnp0mNqqazSf3IbkLf__ftlKlEOGIklZbDs1ruT9b2lxBWOkwt_rWdFbmA6zZ3Ql7QvwR3KXWo_BUJ0nS2FvQ1SxRW-ujnGTrj3ZlhqgFv5t0qmGHkLPmTHRAR0cFrRYiW1yVCUaQjnbpbR0GDd_zpdHVs_ltqhTxSzowKWwxwYp6BglhTLR1fB6Mba-bJbrGXL_GIobTllQRldVu9Yy-v6z_rSEA', 20, 2840, 5000),
-('小天才汤姆', 'https://lh3.googleusercontent.com/aida-public/AB6AXuD2Tjc54rKXBIOQNgZH3nf3sBXZFIrYKYY5VGSPRPS0c0Y3KNxKPUdcdXgqdoVUBx1D4HFCZibgv7VDOimGQsmRwRgNYRnj32LtlasGU9FBwnWAsLr-K6DNH39ZnkgTr1Y-CG9YL2wubrCl0Jhdp2xS0sufqNZsx5WHBrVXUy3xx0ds4ESOnwuOJmze8b8yBkGN3eNNeIuUhXRy0BntK_4AO2zag-aDROsNwefH1AvTSlhVtX0vhl37CSM_L3bDUQpp07eat5JI1wI', 18, 2450, 4500),
-('快乐露西', 'https://lh3.googleusercontent.com/aida-public/AB6AXuDthJ-ZXlDoIDSxA9HrDpKXSP5MdFx3_4gOnHNkzdAFPOmTsOvQQ6OjDrJ7r_QQlPaaeLa6gFM368-PKntRpRO5gzmEZqk41R7hIKytwK0Yj3j2Bb90taiuRTcAIJ6l2PdgtekyVpQuJSXkiz4FltZqM5iQoyttLNJDHPGuj_kf_3OqHAhaeUX1abEQq0jvMFzmZadfd0nPQ6gDUu6r6ePsca9UCZc9P9dn0gtUFAMnVL8D4LiR2IH8MuRslFFc6zHsfg_Fn6oOECU', 16, 2120, 4000),
-('爱学习的乐乐', 'https://picsum.photos/id/101/100/100', 15, 1980, 3800),
-('双语小达人', 'https://picsum.photos/id/102/100/100', 14, 1850, 3600),
-('晨读之星', 'https://picsum.photos/id/103/100/100', 13, 1720, 3400);
+-- 插入排行榜用户数据
+INSERT INTO users (id, name, avatar, level, xp, stars, achievements, learned_words) VALUES
+('00000000-0000-0000-0000-000000000002', '魔法师艾米', '🧙‍♀️', 12, 3200, 450, 25, 120),
+('00000000-0000-0000-0000-000000000003', '勇士小杰', '⚔️', 10, 2800, 380, 20, 95),
+('00000000-0000-0000-0000-000000000004', '学霸莉莉', '📚', 9, 2500, 350, 18, 88),
+('00000000-0000-0000-0000-000000000005', '探险家汤姆', '🗺️', 8, 2200, 320, 15, 75),
+('00000000-0000-0000-0000-000000000006', '公主苏菲', '👑', 7, 1900, 280, 12, 65);
 
 -- =====================================================
--- 插入单词数据
+-- 插入单词数据 (15个单词)
 -- =====================================================
 INSERT INTO words (id, word, pronunciation, meaning, grammar, grammar_tags, sentence_en, sentence_cn, scene_cn, image_url, mnemonic, level) VALUES
 (
@@ -71,6 +69,174 @@ INSERT INTO words (id, word, pronunciation, meaning, grammar, grammar_tags, sent
     '午后的静谧：一只橘猫正缩在窗台的阳光里。',
     'https://lh3.googleusercontent.com/aida-public/AB6AXuC06U-BNyHRkT1-JUWgzXKb9nNoluNP0DZSwD2K1CROjki49uFl2Mv0GIsSKuYgiAQXLHyFK2k__64BNBYnh_P8so-JiQ_a19NExMVp4H7Btl-JJFbUQR4ybmbqJkynF7YLSq_xWi4ePk5Y1NcrTKy4qGpzhGbRppLU3EIM8zTQJgTkECosx484V9exqa5xbOkbmDXZXR6fRKKpGsvxOFpsgU38QkZ6kQ3G9tALtdlWkqLf5OGNeDz5MClfuxiPePnTZX_IRY30yn0',
     '【谐音法】 读音像"开特"，开着特快列车去找小猫。',
+    'Lv.1 Beginner'
+),
+(
+    '10000000-0000-0000-0000-000000000004',
+    'Dog',
+    '/dɒɡ/',
+    'n. 狗。人类最忠诚的朋友，常见的宠物。',
+    '复数 dogs。常见短语：hot dog (热狗)。',
+    ARRAY['名词 (Noun)', '可数名词'],
+    'The dog is playing with a ball.',
+    '狗正在玩球。',
+    '公园的快乐时光：一只金毛犬欢快地奔跑着。',
+    'https://images.unsplash.com/photo-1543466835-00a7907e9de1',
+    '【联想法】 "dog"倒过来是"god"，狗是人类最忠实的伙伴。',
+    'Lv.1 Beginner'
+),
+(
+    '10000000-0000-0000-0000-000000000005',
+    'Book',
+    '/bʊk/',
+    'n. 书。用于阅读和学习的纸质或电子读物。',
+    '复数 books。常见短语：read a book (读书)。',
+    ARRAY['名词 (Noun)', '可数名词'],
+    'I love reading books.',
+    '我喜欢读书。',
+    '图书馆的宝藏：一本本彩色的故事书整齐地排列着。',
+    'https://images.unsplash.com/photo-1512820790803-83ca734da794',
+    '【形似法】 book像两个人背靠背(oo)在看书。',
+    'Lv.1 Beginner'
+),
+(
+    '10000000-0000-0000-0000-000000000006',
+    'Sun',
+    '/sʌn/',
+    'n. 太阳。给地球带来光明和温暖的恒星。',
+    '专有名词，首字母大写 the Sun。',
+    ARRAY['名词 (Noun)', '专有名词'],
+    'The sun is shining brightly.',
+    '太阳明亮地照耀着。',
+    '清晨的光辉：金色的太阳从东方升起。',
+    'https://images.unsplash.com/photo-1419242902214-272b3f66ee7a',
+    '【联想法】 sun=son(儿子)+u，太阳就像天空的儿子。',
+    'Lv.1 Beginner'
+),
+(
+    '10000000-0000-0000-0000-000000000007',
+    'Car',
+    '/kɑːr/',
+    'n. 汽车。一种常见的交通工具。',
+    '复数 cars。常见短语：by car (开车)。',
+    ARRAY['名词 (Noun)', '可数名词'],
+    'My dad drives a red car.',
+    '我爸爸开一辆红色的汽车。',
+    '街道上的风景：一辆红色小轿车停在路边。',
+    'https://images.unsplash.com/photo-1494976388531-d1058494cdd8',
+    '【谐音法】 "car"读音像"卡"，汽车需要油卡加油。',
+    'Lv.1 Beginner'
+),
+(
+    '10000000-0000-0000-0000-000000000008',
+    'Ball',
+    '/bɔːl/',
+    'n. 球。圆形的玩具或运动器材。',
+    '复数 balls。常见短语：play ball (玩球)。',
+    ARRAY['名词 (Noun)', '可数名词'],
+    'The children are playing with a ball.',
+    '孩子们正在玩球。',
+    '游乐场的欢乐：一个彩色的皮球在空中飞舞。',
+    'https://images.unsplash.com/photo-1575361204480-aadea25e6e68',
+    '【形似法】 ball中间ll像两个球并排。',
+    'Lv.1 Beginner'
+),
+(
+    '10000000-0000-0000-0000-000000000009',
+    'Tree',
+    '/triː/',
+    'n. 树。一种高大的木本植物。',
+    '复数 trees。常见短语：family tree (家谱)。',
+    ARRAY['名词 (Noun)', '可数名词'],
+    'There is a big tree in front of my house.',
+    '我家门前有一棵大树。',
+    '森林的守护者：一棵枝叶茂盛的大树高高耸立。',
+    'https://images.unsplash.com/photo-1441974231531-c6227db76b6e',
+    '【联想法】 tree的ee像两只眼睛，看着树上的叶子。',
+    'Lv.1 Beginner'
+),
+(
+    '10000000-0000-0000-0000-00000000000A',
+    'Fish',
+    '/fɪʃ/',
+    'n. 鱼。生活在水中的动物。',
+    '单复数同形。常见短语：go fishing (去钓鱼)。',
+    ARRAY['名词 (Noun)', '可数名词'],
+    'I can see many fish in the pond.',
+    '我能看到池塘里有很多鱼。',
+    '水族馆的奇迹：五彩斑斓的热带鱼在水中游动。',
+    'https://images.unsplash.com/photo-153559127366 8-578e31182c4f',
+    '【形似法】 fish中的i像一条小鱼。',
+    'Lv.1 Beginner'
+),
+(
+    '10000000-0000-0000-0000-00000000000B',
+    'Bird',
+    '/bɜːrd/',
+    'n. 鸟。有羽毛、会飞的动物。',
+    '复数 birds。常见短语：early bird (早起的人)。',
+    ARRAY['名词 (Noun)', '可数名词'],
+    'I heard a bird singing this morning.',
+    '今天早上我听到一只鸟在唱歌。',
+    '春天的使者：一只小鸟站在树枝上欢快地鸣叫。',
+    'https://images.unsplash.com/photo-1444464666168-49d633b86797',
+    '【联想法】 bird中的ir像鸟的两只翅膀。',
+    'Lv.1 Beginner'
+),
+(
+    '10000000-0000-0000-0000-00000000000C',
+    'House',
+    '/haʊs/',
+    'n. 房子。人们居住的建筑物。',
+    '复数 houses。常见短语：at home (在家)。',
+    ARRAY['名词 (Noun)', '可数名词'],
+    'We live in a small house.',
+    '我们住在一所小房子里。',
+    '温馨的港湾：一座红色屋顶的房子坐落在花园里。',
+    'https://images.unsplash.com/photo-1480074568708-e7b720bb3f09',
+    '【谐音法】 "house"读音像"好死"，房子是遮风避雨的好地方。',
+    'Lv.1 Beginner'
+),
+(
+    '10000000-0000-0000-0000-00000000000D',
+    'Flower',
+    '/ˈflaʊər/',
+    'n. 花。植物美丽的开放部分。',
+    '复数 flowers。常见短语：a bunch of flowers (一束花)。',
+    ARRAY['名词 (Noun)', '可数名词'],
+    'The flowers in the garden are beautiful.',
+    '花园里的花很美。',
+    '花园的色彩：各种颜色的花朵竞相开放。',
+    'https://images.unsplash.com/photo-1490750967868-88aa4486c946',
+    '【联想法】 flower=flow(流动)+er，花香在空中流动。',
+    'Lv.1 Beginner'
+),
+(
+    '10000000-0000-0000-0000-00000000000E',
+    'Water',
+    '/ˈwɔːtər/',
+    'n. 水。生命必需的液体。',
+    '不可数名词。常见短语：drink water (喝水)。',
+    ARRAY['名词 (Noun)', '不可数名词'],
+    'I drink eight glasses of water every day.',
+    '我每天喝八杯水。',
+    '生命之源：清澈的水在杯子里轻轻摇晃。',
+    'https://images.unsplash.com/photo-1523413363574-c30aa1c2a516',
+    '【拆分法】 wa+ter，"哇"的一声倒进杯子里。',
+    'Lv.1 Beginner'
+),
+(
+    '10000000-0000-0000-0000-00000000000F',
+    'Happy',
+    '/ˈhæp.i/',
+    'adj. 快乐的；高兴的。表示愉快的情绪状态。',
+    '可作表语或定语。常见短语：Happy Birthday! (生日快乐!)。',
+    ARRAY['形容词 (Adjective)'],
+    'She looks very happy today.',
+    '她今天看起来很开心。',
+    '笑容满面：孩子们开心地在操场上玩耍。',
+    'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba',
+    '【联想法】 happy有两个p，像两个笑脸pp。',
     'Lv.1 Beginner'
 );
 

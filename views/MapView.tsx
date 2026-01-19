@@ -101,19 +101,19 @@ const MapView: React.FC<MapViewProps> = ({ user, onStartChallenge, onSelectWord,
             </svg>
           </div>
 
-          <div className="absolute top-16 left-8 pointer-events-none opacity-50 text-orange-400"><span className="material-symbols-outlined text-4xl">home</span></div>
-          <div className="absolute top-28 right-12 pointer-events-none opacity-50 text-emerald-400 animate-spin-slow"><span className="material-symbols-outlined text-5xl">mode_fan</span></div>
-          <div className="absolute bottom-32 left-10 pointer-events-none opacity-50 text-emerald-300"><span className="material-symbols-outlined text-4xl">potted_plant</span></div>
+          <div className="absolute top-12 left-8 pointer-events-none opacity-50 text-orange-400"><span className="material-symbols-outlined text-3xl">home</span></div>
+          <div className="absolute top-20 right-12 pointer-events-none opacity-50 text-emerald-400 animate-spin-slow"><span className="material-symbols-outlined text-4xl">mode_fan</span></div>
+          <div className="absolute top-[55%] left-10 pointer-events-none opacity-50 text-emerald-300"><span className="material-symbols-outlined text-3xl">potted_plant</span></div>
 
           {/* Entry 1: 记忆大挑战 */}
           <div
             onClick={onStartChallenge}
-            className="absolute bottom-24 left-1/2 -translate-x-1/2 game-hit-area"
+            className="absolute top-[48%] left-1/2 -translate-x-1/2 game-hit-area"
           >
             <div className="flex flex-col items-center pointer-events-none">
               <div className="relative animate-float">
-                <div className="w-28 h-28 bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-[2.5rem] cartoon-border flex items-center justify-center relative shadow-2xl">
-                  <span className="material-symbols-outlined text-white text-5xl fill-1">psychology</span>
+                <div className="w-24 h-24 bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-[2rem] cartoon-border flex items-center justify-center relative shadow-2xl">
+                  <span className="material-symbols-outlined text-white text-4xl fill-1">psychology</span>
                 </div>
                 <div className="absolute -top-1 -right-1 bg-yellow-400 border-2 border-white rounded-full size-8 flex items-center justify-center animate-pulse">
                   <span className="material-symbols-outlined text-white text-sm fill-1">bolt</span>
@@ -128,12 +128,12 @@ const MapView: React.FC<MapViewProps> = ({ user, onStartChallenge, onSelectWord,
           {/* Entry 2: 字母消消乐 */}
           <div
             onClick={onStartLetterGame}
-            className="absolute bottom-1/3 right-[20px] game-hit-area game-hit-area-side"
+            className="absolute top-[35%] right-[15px] game-hit-area game-hit-area-side"
           >
             <div className="flex flex-col items-center pointer-events-none">
               <div className="relative animate-float-delayed">
-                <div className="w-24 h-24 bg-gradient-to-br from-rose-400 to-rose-500 rounded-full cartoon-border flex items-center justify-center relative shadow-2xl">
-                  <span className="material-symbols-outlined text-white text-5xl fill-1">extension</span>
+                <div className="w-20 h-20 bg-gradient-to-br from-rose-400 to-rose-500 rounded-full cartoon-border flex items-center justify-center relative shadow-2xl">
+                  <span className="material-symbols-outlined text-white text-4xl fill-1">extension</span>
                 </div>
               </div>
               <div className="mt-3 bg-rose-500 px-5 py-1.5 rounded-full border-2 border-white shadow-lg">
@@ -145,26 +145,26 @@ const MapView: React.FC<MapViewProps> = ({ user, onStartChallenge, onSelectWord,
           {/* Entry 3: 单词魔法卡 */}
           <div
             onClick={onOpenWordBook}
-            className="absolute top-1/4 left-1/2 -translate-x-1/2 game-hit-area"
+            className="absolute top-[20%] left-1/2 -translate-x-1/2 game-hit-area"
           >
             <div className="flex flex-col items-center pointer-events-none">
               <div className="relative animate-float">
                 <div className="absolute inset-0 bg-amber-400/30 rounded-full blur-3xl scale-150 animate-pulse" />
-                <div className="w-32 h-32 bg-gradient-to-b from-amber-300 via-amber-400 to-orange-500 rounded-[2.5rem] p-1 border-[6px] border-white shadow-[0_8px_0_0_#b45309] relative z-10 flex items-center justify-center overflow-hidden">
-                  <span className="material-symbols-outlined text-white text-7xl drop-shadow-lg fill-1">auto_stories</span>
+                <div className="w-28 h-28 bg-gradient-to-b from-amber-300 via-amber-400 to-orange-500 rounded-[2rem] p-1 border-[5px] border-white shadow-[0_6px_0_0_#b45309] relative z-10 flex items-center justify-center overflow-hidden">
+                  <span className="material-symbols-outlined text-white text-6xl drop-shadow-lg fill-1">auto_stories</span>
                 </div>
               </div>
-              <div className="mt-6 bg-gradient-to-r from-orange-500 to-amber-500 px-8 py-2.5 rounded-full shadow-xl border-2 border-white">
-                <p className="font-black text-white text-lg tracking-[0.1em]">单词魔法卡</p>
+              <div className="mt-5 bg-gradient-to-r from-orange-500 to-amber-500 px-6 py-2 rounded-full shadow-xl border-2 border-white">
+                <p className="font-black text-white text-base tracking-[0.1em]">单词魔法卡</p>
               </div>
             </div>
           </div>
 
           {/* Castle */}
-          <div className="absolute top-20 left-1/2 -translate-x-1/2 group opacity-30 grayscale pointer-events-none">
+          <div className="absolute top-12 left-1/2 -translate-x-1/2 group opacity-30 grayscale pointer-events-none">
             <div className="relative animate-float-delayed">
-              <div className="w-28 h-28 bg-white/80 rounded-full flex items-center justify-center border-4 border-slate-200">
-                <span className="material-symbols-outlined text-slate-300 text-5xl">castle</span>
+              <div className="w-24 h-24 bg-white/80 rounded-full flex items-center justify-center border-4 border-slate-200">
+                <span className="material-symbols-outlined text-slate-300 text-4xl">castle</span>
               </div>
             </div>
             <p className="text-center font-black text-slate-400 mt-2 text-xs uppercase tracking-widest">英雄之巅</p>

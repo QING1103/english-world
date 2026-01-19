@@ -105,10 +105,10 @@ const MapView: React.FC<MapViewProps> = ({ user, onStartChallenge, onSelectWord,
           <div className="absolute top-20 right-12 pointer-events-none opacity-50 text-emerald-400 animate-spin-slow"><span className="material-symbols-outlined text-4xl">mode_fan</span></div>
           <div className="absolute top-[55%] left-10 pointer-events-none opacity-50 text-emerald-300"><span className="material-symbols-outlined text-3xl">potted_plant</span></div>
 
-          {/* Entry 1: 记忆大挑战 - 左下位置 */}
+          {/* Entry 1: 记忆大挑战 - 下部左侧 */}
           <div
             onClick={onStartChallenge}
-            className="absolute bottom-[15%] left-[10%] game-hit-area"
+            className="absolute top-[65%] left-[12%] game-hit-area"
           >
             <div className="flex flex-col items-center pointer-events-none">
               <div className="relative animate-float">
@@ -125,10 +125,10 @@ const MapView: React.FC<MapViewProps> = ({ user, onStartChallenge, onSelectWord,
             </div>
           </div>
 
-          {/* Entry 2: 字母消消乐 - 右中位置 */}
+          {/* Entry 2: 字母消消乐 - 中部右侧 */}
           <div
             onClick={onStartLetterGame}
-            className="absolute top-[45%] right-[10%] game-hit-area game-hit-area-side"
+            className="absolute top-[50%] right-[8%] game-hit-area game-hit-area-side"
           >
             <div className="flex flex-col items-center pointer-events-none">
               <div className="relative animate-float-delayed">
@@ -142,10 +142,10 @@ const MapView: React.FC<MapViewProps> = ({ user, onStartChallenge, onSelectWord,
             </div>
           </div>
 
-          {/* Entry 3: 单词魔法卡 - 左上位置（主要入口）*/}
+          {/* Entry 3: 单词魔法卡 - 上中部左侧（主要入口）*/}
           <div
             onClick={onOpenWordBook}
-            className="absolute top-[18%] left-[15%] game-hit-area"
+            className="absolute top-[30%] left-[18%] game-hit-area"
           >
             <div className="flex flex-col items-center pointer-events-none">
               <div className="relative animate-float">
